@@ -1,10 +1,10 @@
 {
-  "name": "redux-dynamic-modules",
+  "name": "@b2b-apps/redux-dynamic-modules",
   "version": "2.0.1",
   "description": "Modularize the redux app by dynamically loading reducers, state and sagas",
   "repository": {
     "type": "github",
-    "url": "https://github.com/Microsoft/redux-dynamic-modules"
+    "url": "git+https://github.com/Microsoft/redux-dynamic-modules.git"
   },
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
@@ -22,13 +22,14 @@
     "dynamic",
     "load"
   ],
-  "author": "Navneet Gupta (Microsoft), Alex Bettadapur (Microsoft)",
+  "author": "Navneet Gupta (Microsoft)",
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "^23.3.1",
     "@types/react": "^16.4.13",
     "@types/react-redux": "^6.0.6",
     "@types/redux": "^3.6.0",
+    "@types/node": "^10.12.5",
     "jest": "^23.5.0",
     "react": "^16.4.2",
     "react-redux": "^5.0.7",
@@ -67,5 +68,12 @@
   },
   "dependencies": {
     "redux-dynamic-middlewares": "^1.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/Microsoft/redux-dynamic-modules/issues"
+  },
+  "homepage": "https://github.com/Microsoft/redux-dynamic-modules#readme",
+  "directories": {
+    "lib": "lib"
   }
 }
