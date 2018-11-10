@@ -10,6 +10,7 @@ import {
 export interface IDynamicModuleLoaderProps<OriginalState, AdditionalState> {
   /** Modules that need to be dynamically registerd */
   modules: IModule<AdditionalState>[];
+  contextStore: IModuleStore<any>;
 }
 
 export interface IDynamicModuleLoaderContext {
@@ -39,9 +40,10 @@ export class DynamicModuleLoader<
     context: IDynamicModuleLoaderContext
   ) {
     super(props, context);
-    //@ts-ignore
-    const { modules, store } = props;
-
+ 
+    const { modules, contextStore } = props;
+    const store: IModuleStore<any> = contextStore;
+    
     //const store: IModuleStore<any> = context.store;
 
     if (!store) {
