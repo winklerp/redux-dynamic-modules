@@ -1,5 +1,6 @@
 import * as React from "react";
 import * as PropTypes from "prop-types";
+
 import {
   IModule,
   IModuleStore,
@@ -38,8 +39,11 @@ export class DynamicModuleLoader<
     context: IDynamicModuleLoaderContext
   ) {
     super(props, context);
-    const { modules } = props;
-    const store: IModuleStore<any> = context.store;
+    //@ts-ignore
+    const { modules, store } = props;
+
+    //const store: IModuleStore<any> = context.store;
+
     if (!store) {
       throw new Error("Could not load store from React context.");
     }
@@ -63,3 +67,5 @@ export class DynamicModuleLoader<
     return this.props.children;
   }
 }
+
+
